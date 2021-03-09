@@ -1,0 +1,62 @@
+@startuml
+
+Tienda "0 .. 1" --> "1" Equipo
+Equipo o-- Gafa
+Equipo o-- Esqui
+Equipo o-- Baston
+Equipo "0 .. n" --> "0 .. n" Cliente
+(Equipo,Cliente) .. Alquiler
+
+class Tienda {
+  CIF : String
+  ubicacion : String
+  nombre : String
+  __
+  
+
+}
+
+class Equipo {
+    marca : Marca
+    modelo : String
+    numeroSerie : Int
+    __
+
+}
+
+class Cliente{
+    DNI : String
+    nombre : String
+    telefono : Int
+    __
+
+}
+
+class Baston{
+    marca : Marca
+    modelo : Equipo
+    numeroSerie : Equipo
+    __
+
+}
+
+class Gafa{
+    marca : Marca
+    modelo : Equipo
+    numeroSerie : Equipo
+    __
+
+}
+
+class Esqui{
+    marca : Marca
+    numeroSerie : Equipo
+    __
+
+}
+
+class Alquiler{
+    fechaAlquiler : DateTime
+    fechaDevolucion : DateTime
+}
+@enduml

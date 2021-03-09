@@ -1,0 +1,53 @@
+@startuml
+
+    SociedadDeportiva --> Publico
+    Publico <|-- Abonado
+    Publico <|-- Simpatizantes
+    SociedadDeportiva --> Partido
+    Partido --> Entrada
+
+
+
+    abstract class SociedadDeportiva{
+
+    }
+
+    class Publico{
+        DNI : String
+        direccion : String
+        telefono : Int
+        __
+        CompraEntrada()
+        MaximoEntradas()
+    }
+
+    class Abonado{
+        numeroSocio : Int
+        __
+
+    }
+
+    class Simpatizantes{
+        fechaAlta : DateTime
+        __
+
+    }
+
+    class Partido{
+        codigoPartido : Int
+        nombre : String
+        fechaPartido : DateTime
+        __
+
+
+    }
+
+    class Entrada{
+        precio : Double
+        numeroAsiento : Int
+        __
+        
+    }
+
+    
+@enduml
