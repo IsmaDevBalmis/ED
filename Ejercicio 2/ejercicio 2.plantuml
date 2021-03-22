@@ -49,5 +49,7 @@
         
     }
 
-    
+    note as N1
+    Visibilidad de los atributos
+end note
 @enduml
