@@ -59,4 +59,7 @@ class Alquiler{
     fechaAlquiler : DateTime
     fechaDevolucion : DateTime
 }
+note as N1
+  Multiplicidad
+end note
 @enduml
